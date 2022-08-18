@@ -1,0 +1,96 @@
+.mint-card {
+	@media screen and (min-width: 768px) {
+		display: flex;
+	}
+}
+
+.mint-card__header {
+	position: relative;
+	z-index: 5;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	// gap: 48px;
+
+	height: 490px;
+	padding: 48px;
+	background-color: $white;
+	border-radius: 8px;
+
+	@media screen and (min-width: 768px) {
+		width: 348px;
+		min-height: 550px;
+
+		border-radius: 12px 0px 0px 12px;
+	}
+
+	@media screen and (min-width: 1440px) {
+		width: 566px;
+		min-height: 680px;
+
+		padding: 118px;
+	}
+}
+
+.mint-card__top {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.mint-card__body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 48px;
+	background-color: $green;
+	margin-top: -16px;
+	border-radius: 0px 0px 8px 8px;
+
+	@media screen and (min-width: 768px) {
+		border-radius: 0px 12px 12px 0px;
+		margin-top: 0px;
+
+		@media screen and (min-width: 1440px) {
+			padding: 118px;
+		}
+	}
+}
+
+.mint-card__list {
+	width: 100%;
+}
+
+.mint-card__item:not(:last-child) {
+	margin-bottom: 12px;
+
+	@media screen and (min-width: 768px) {
+		margin-bottom: 24px;
+	}
+}
+
+.mint-card__button {
+	width: 100%;
+
+	@media screen and (min-width: 1440px) {
+		max-width: 326px;
+		margin: 0px auto;
+	}
+}
+
+.mint-card__image {
+	@media screen and (max-width: 767px) {
+		margin-bottom: 24px;
+	}
+
+	@media screen and (min-width: 768px) {
+		width: 320px;
+	}
+
+	@media screen and (min-width: 1440px) {
+		width: 600px;
+	}
+}

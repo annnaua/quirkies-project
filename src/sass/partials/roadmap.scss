@@ -1,0 +1,76 @@
+.roadmap__list-mobile {
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+}
+
+.roadmap__list-mobile .roadmap-card:not(:last-child) {
+	margin-bottom: 24px;
+}
+
+.swiper {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+}
+
+.roadmap {
+	height: auto;
+}
+
+.roadmap-card {
+	position: relative;
+	border-radius: 8px;
+}
+
+.roadmap-card__header {
+	@extend %card;
+	position: relative;
+
+	min-height: 242px;
+	background-color: $white;
+
+	@media screen and (min-width: 768px) {
+		min-height: 280px;
+	}
+
+	@media screen and (min-width: 1440px) {
+		min-height: 472px;
+	}
+}
+
+.roadmap-card__body {
+	@extend %card;
+
+	bottom: 0;
+	z-index: 5;
+	width: 100%;
+
+	min-height: 215px;
+	background-color: $violet;
+	padding: 60px 48px;
+	border: 0px 0px 8px 8px;
+
+	margin-top: -16px;
+
+	@media screen and (min-width: 768px) {
+		border: 0px 0px 12px 12px;
+		min-height: 232px;
+	}
+
+	@media screen and (min-width: 1440px) {
+		padding: 60px 118px;
+	}
+}
+
+.roadmap-card__lable {
+	margin-bottom: 24px;
+
+	@media screen and (min-width: 768px) {
+		margin-bottom: 48px;
+	}
+
+	@media screen and (min-width: 1440px) {
+		margin-bottom: 60px;
+	}
+}

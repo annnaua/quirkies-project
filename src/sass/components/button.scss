@@ -1,0 +1,130 @@
+// BUTTON
+
+%button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 60px;
+
+	padding: 6px;
+	border: 4px solid transparent;
+	border-radius: 8px;
+
+	font-weight: 900;
+	font-size: 12px;
+	line-height: 120%;
+	text-transform: uppercase;
+
+	@media screen and (min-width: 768px) {
+		font-size: 14px;
+	}
+}
+
+.button-white {
+	@extend %button;
+
+	color: $text-white;
+	border-color: $white;
+
+	&:hover,
+	&:focus {
+		color: $text-black;
+		background-color: $white;
+	}
+}
+
+.button-black {
+	@extend %button;
+
+	color: $text-black;
+	border-color: $black;
+
+	&:hover,
+	&:focus {
+		color: $text-white;
+		background-color: $black;
+	}
+}
+
+// BUTTON CARD
+
+.button-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 40px;
+
+	font-weight: 900;
+	font-size: 12px;
+	line-height: 120%;
+	text-transform: uppercase;
+
+	padding: 6px;
+	border: 4px solid $black;
+	border-radius: 8px;
+
+	color: $text-black;
+
+	@media screen and (min-width: 768px) {
+		height: 60px;
+		font-size: 14px;
+	}
+
+	&:hover,
+	&:focus {
+		color: $text-white;
+		background-color: $black;
+	}
+}
+
+// BUTTON TOGGLE
+
+.button-toggle {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2px;
+
+	width: 24px;
+	height: 24px;
+
+	border: solid 2px $violet;
+	border-radius: 4px;
+
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+
+	& span {
+		position: relative;
+		display: block;
+
+		width: 12px;
+		height: 2px;
+		border-radius: 2px;
+
+		background-color: $white;
+		transition: all 0.3s;
+	}
+
+	&.active {
+		@media screen and (min-width: 768px) {
+			display: none;
+		}
+	}
+}
+
+.button-toggle.active span:nth-child(1) {
+	transform: rotate(45deg) translate(2px, 1px);
+}
+.button-toggle.active span:nth-child(2) {
+	display: none;
+}
+.button-toggle.active span:nth-child(3) {
+	transform: rotate(-45deg) translate(2px, -1px);
+}
