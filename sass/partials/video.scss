@@ -1,0 +1,48 @@
+// videoplayer ----------
+
+.videoplayer {
+	width: 100%;
+}
+
+.video__container {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.videoplayer__image {
+	position: absolute;
+	transform: translate(-10%, 105%);
+
+	width: 30%;
+}
+
+// video button ----------
+
+.video__button {
+	width: 40px;
+	height: 40px;
+	padding: 6px;
+
+	cursor: pointer;
+
+	@media screen and (min-width: 1440px) {
+		width: 60px;
+		height: 60px;
+		padding: 12px;
+	}
+}
+
+.button-sound {
+	display: none;
+}
+
+.video__button.sound .button-sound {
+	display: block;
+}
+
+.video__button.sound .button-mute {
+	display: none;
+}

@@ -1,0 +1,100 @@
+// mint ----------
+
+.mint .section__title {
+  color: $text-white;
+
+  span {
+    color: $text-pink;
+  }
+
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  }
+}
+
+.mint-card {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+// mint header ----------
+
+.mint-card__header {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 48px;
+
+  padding: 48px;
+  border-radius: 8px;
+  background-color: $white;
+
+  @media screen and (min-width: 768px) {
+    width: 348px;
+    border-radius: 12px 0px 0px 12px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 566px;
+    padding: 118px;
+  }
+}
+
+.mint-card__title {
+  margin: 48px 0px 24px 0px;
+}
+
+// mint body ----------
+
+.mint-card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 64px 48px 48px 48px;
+  border-radius: 0px 0px 8px 8px;
+  background-color: $pink;
+
+  @media screen and (max-width: 767px) {
+    margin-top: -16px;
+  }
+
+  @media screen and (min-width: 768px) {
+    border-radius: 0px 12px 12px 0px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 118px;
+  }
+}
+
+// mint image ----------
+
+.mint-card__image {
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 768px) {
+    width: 260px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 580px;
+  }
+}
+
+.mint-card__item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.mint-card__button {
+  width: 100%;
+
+  @media screen and (min-width: 1440px) {
+    max-width: 326px;
+    margin: 0px auto;
+  }
+}

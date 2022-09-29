@@ -1,0 +1,112 @@
+// tale mobile ----------
+
+.tale__list-mobile {
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+
+	.tale__item:not(:last-child) {
+		margin-bottom: 24px;
+	}
+}
+
+// tale ----------
+
+.swiper-tale {
+	display: none;
+
+	@media screen and (min-width: 768px) {
+		display: block;
+	}
+}
+
+.tale-card {
+	@media screen and (min-width: 768px) {
+		display: flex;
+	}
+}
+
+// card header ----------
+
+.tale-card__header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 48px;
+
+	min-height: 510px;
+
+	background-color: $white;
+	padding: 48px;
+	border-radius: 8px;
+
+	@media screen and (min-width: 768px) {
+		width: 348px;
+		min-height: 545px;
+
+		border-radius: 12px 0px 0px 12px;
+	}
+
+	@media screen and (min-width: 1440px) {
+		width: 566px;
+		min-height: 680px;
+
+		padding: 118px;
+	}
+}
+
+.tale__item:nth-child(2n) .tale-card__header {
+	background-color: $pink;
+}
+
+.tale__item:nth-child(2n) .card-lable {
+	color: $text-pink;
+	background-color: $white;
+}
+
+.tale__item:nth-child(2n) .card-title {
+	color: $text-white;
+}
+
+.tale__item:nth-child(2n) .text {
+	color: $text-white;
+}
+
+.tale__item:nth-child(2n) .tale-card__body {
+	background-color: $white;
+}
+
+.tale__item .tale-card__body .tale-card__image:last-child {
+	display: none;
+
+	@media screen and (min-width: 1440px) {
+		display: block;
+	}
+}
+
+.tale-card__title {
+	margin: 48px 0px 24px 0px;
+}
+
+// card body  ----------
+
+.tale-card__body {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	flex-grow: 1;
+	gap: 24px;
+
+	padding: 48px;
+	background-color: $violet;
+	border-radius: 0px 12px 12px 0px;
+}
+
+.tale-card__image {
+	width: 290px;
+}
