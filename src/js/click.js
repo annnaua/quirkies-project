@@ -1,22 +1,27 @@
 // video click
 
 const videoEl = document.querySelector('video');
-const buttonSound = document.querySelector('[data-volume-button]');
-const buttonSoundIcon = document.querySelector('.button-sound__icon');
+const buttonSound = document.querySelector('[data-sound-button]');
 
 buttonSound.addEventListener('click', () => {
 	videoEl.muted = !videoEl.muted;
 	videoEl.volume = 0.1;
 
-	buttonSoundIcon.classList.toggle('sound');
+	buttonSound.classList.toggle('sound');
 });
 
-// roadmap click
+const faqsCardHeaders = document.querySelectorAll('.faqs-card__header');
 
-const roadmapCard = document.querySelectorAll('.roadmap-card');
+faqsCardHeaders.forEach((faqsCardHeader) => {
+	faqsCardHeader.addEventListener('click', () => {
+		faqsCardHeader.classList.toggle('open');
 
-for (const card of roadmapCard) {
-	card.addEventListener('click', function () {
-		card.classList.toggle('open');
+		const faqsCardBody = faqsCardHeader.nextElementSibling;
+
+		if (faqsCardHeader.classList.contains('open')) {
+			faqsCardBody.style.maxHeight = faqsCardBody.scrollHeight + 'px';
+		} else {
+			faqsCardBody.style.maxHeight = 0;
+		}
 	});
-}
+});

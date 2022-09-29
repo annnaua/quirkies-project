@@ -13,6 +13,7 @@
     "vite": "^3.0.7"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "locomotive-scroll": "^4.1.4",
     "swiper": "^8.3.2"
   }

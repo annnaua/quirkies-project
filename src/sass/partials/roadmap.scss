@@ -1,76 +1,66 @@
+// roadmap mobile ----------
+
 .roadmap__list-mobile {
-	@media screen and (min-width: 768px) {
-		display: none;
-	}
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  .roadmap__item:not(:last-child) {
+    margin-bottom: 24px;
+  }
 }
 
-.roadmap__list-mobile .roadmap-card:not(:last-child) {
-	margin-bottom: 24px;
+// roadmap ----------
+
+.swiper-roadmap {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
 }
 
-.swiper {
-	@media screen and (max-width: 767px) {
-		display: none;
-	}
-}
-
-.roadmap {
-	height: auto;
-}
-
-.roadmap-card {
-	position: relative;
-	border-radius: 8px;
-}
+// roadmap header ----------
 
 .roadmap-card__header {
-	@extend %card;
-	position: relative;
+  @extend %card;
+  position: relative;
+  z-index: 5;
 
-	min-height: 242px;
-	background-color: $white;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 
-	@media screen and (min-width: 768px) {
-		min-height: 280px;
-	}
+  min-height: 245px;
+  background-color: $white;
 
-	@media screen and (min-width: 1440px) {
-		min-height: 472px;
-	}
+  @media screen and (min-width: 768px) {
+    min-height: 280px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    min-height: 475px;
+    gap: 60px;
+  }
 }
 
 .roadmap-card__body {
-	@extend %card;
+  width: 100%;
+  min-height: 205px;
 
-	bottom: 0;
-	z-index: 5;
-	width: 100%;
+  padding: 64px 48px 48px 48px;
+  border-radius: 0px 0px 8px 8px;
+  background-color: $violet;
 
-	min-height: 215px;
-	background-color: $violet;
-	padding: 60px 48px;
-	border: 0px 0px 8px 8px;
+  margin-top: -16px;
 
-	margin-top: -16px;
+  @media screen and (min-width: 768px) {
+    min-height: 225px;
+    border-radius: 0px 0px 12px 12px;
+  }
 
-	@media screen and (min-width: 768px) {
-		border: 0px 0px 12px 12px;
-		min-height: 232px;
-	}
-
-	@media screen and (min-width: 1440px) {
-		padding: 60px 118px;
-	}
-}
-
-.roadmap-card__lable {
-	margin-bottom: 24px;
-
-	@media screen and (min-width: 768px) {
-		margin-bottom: 48px;
-	}
-
-	@media screen and (min-width: 1440px) {
-		margin-bottom: 60px;
-	}
+  @media screen and (min-width: 1440px) {
+    min-height: 205px;
+    padding: 76px 118px 60px 118px;
+  }
 }

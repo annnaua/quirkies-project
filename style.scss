@@ -1,27 +1,31 @@
 // Utilites ----------
-@import './src/sass/utils/variables.scss';
-@import './src/sass/utils/global.scss';
-@import './src/sass/utils/components.scss';
+@import "./src/sass/utils/variables.scss";
+@import "./src/sass/utils/global.scss";
+@import "./src/sass/utils/components.scss";
 
 // Components ----------
-@import './src/sass/components/button.scss';
-@import './src/sass/components/card.scss';
+@import "./src/sass/components/marquee.scss";
+@import "./src/sass/components/button.scss";
+@import "./src/sass/components/card.scss";
 
 // Partials ----------
 
-// menu / menu-mobile
-@import './src/sass/partials/menu.scss';
+// menu
+@import "./src/sass/partials/menu.scss";
+
 // header
-@import './src/sass/partials/header.scss';
+@import "./src/sass/partials/header.scss";
 // about
-@import './src/sass/partials/about.scss';
+@import "./src/sass/partials/about.scss";
 // tale
-@import './src/sass/partials/tale.scss';
+@import "./src/sass/partials/tale.scss";
 // roadmap
-@import './src/sass/partials/roadmap.scss';
+@import "./src/sass/partials/roadmap.scss";
 // mint
-@import './src/sass/partials/mint.scss';
+@import "./src/sass/partials/mint.scss";
 // video
-@import './src/sass/partials/video.scss';
+@import "./src/sass/partials/video.scss";
 // team
-@import './src/sass/partials/team.scss';
+@import "./src/sass/partials/team.scss";
+// faqs
+@import "./src/sass/partials/faqs.scss";

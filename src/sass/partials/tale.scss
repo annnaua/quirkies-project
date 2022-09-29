@@ -1,22 +1,22 @@
+// tale mobile ----------
+
 .tale__list-mobile {
 	@media screen and (min-width: 768px) {
 		display: none;
 	}
+
+	.tale__item:not(:last-child) {
+		margin-bottom: 24px;
+	}
 }
 
-.tale__list {
-	position: relative;
-}
+// tale ----------
 
-.tale__item:not(:last-child) {
-	margin-bottom: 24px;
+.swiper-tale {
+	display: none;
 
 	@media screen and (min-width: 768px) {
-		margin-bottom: 48px;
-	}
-
-	@media screen and (min-width: 1440px) {
-		margin-bottom: 60px;
+		display: block;
 	}
 }
 
@@ -26,12 +26,15 @@
 	}
 }
 
+// card header ----------
+
 .tale-card__header {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	gap: 48px;
 
-	height: 490px;
+	min-height: 510px;
 
 	background-color: $white;
 	padding: 48px;
@@ -39,7 +42,7 @@
 
 	@media screen and (min-width: 768px) {
 		width: 348px;
-		min-height: 550px;
+		min-height: 545px;
 
 		border-radius: 12px 0px 0px 12px;
 	}
@@ -52,21 +55,21 @@
 	}
 }
 
-.tale__item:nth-child(even) .tale-card__header {
-	background-color: $green;
+.tale__item:nth-child(2n) .tale-card__header {
+	background-color: $pink;
 }
 
 .tale__item:nth-child(2n) .card-lable {
-	color: $green;
+	color: $text-pink;
 	background-color: $white;
 }
 
 .tale__item:nth-child(2n) .card-title {
-	color: $white;
+	color: $text-white;
 }
 
 .tale__item:nth-child(2n) .text {
-	color: $white;
+	color: $text-white;
 }
 
 .tale__item:nth-child(2n) .tale-card__body {
@@ -81,16 +84,23 @@
 	}
 }
 
+.tale-card__title {
+	margin: 48px 0px 24px 0px;
+}
+
+// card body  ----------
+
 .tale-card__body {
 	@media screen and (max-width: 767px) {
 		display: none;
 	}
 
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	gap: 24px;
+	align-items: center;
+
 	flex-grow: 1;
+	gap: 24px;
 
 	padding: 48px;
 	background-color: $violet;
@@ -98,20 +108,5 @@
 }
 
 .tale-card__image {
-	border-radius: 12px;
-	width: 320px;
-}
-
-.tale-card__title {
-	margin-bottom: 12px;
-
-	@media screen and (min-width: 768px) {
-		margin-bottom: 24px;
-	}
-}
-
-.tale-card__top {
-	display: flex;
-	flex-direction: column;
-	gap: 24px;
+	width: 290px;
 }
